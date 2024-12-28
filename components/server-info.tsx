@@ -29,37 +29,37 @@ const maps: MapInfo[] = [
   {
     id: 1,
     name: "DAWNBREAKER",
-    image: "/1.png?height=200&width=400",
+    image: "/placeholder.svg?height=200&width=400",
     mode: "CONQUEST LARGE"
   },
   {
     id: 2,
     name: "PROPAGANDA",
-    image: "/2.png?height=200&width=400",
+    image: "/placeholder.svg?height=200&width=400",
     mode: "CONQUEST LARGE"
   },
   {
     id: 3,
     name: "OPERATION LOCKER",
-    image: "/3.png?height=200&width=400",
+    image: "/placeholder.svg?height=200&width=400",
     mode: "CONQUEST LARGE"
   },
   {
     id: 4,
     name: "LANCANG DAM",
-    image: "/4.png?height=200&width=400",
+    image: "/placeholder.svg?height=200&width=400",
     mode: "CONQUEST LARGE"
   },
   {
     id: 5,
     name: "SIEGE OF SHANGHAI",
-    image: "/5.png?height=200&width=400",
+    image: "/placeholder.svg?height=200&width=400",
     mode: "CONQUEST LARGE"
   },
   {
     id: 6,
     name: "GOLMUD RAILWAY",
-    image: "/5.png?height=200&width=400",
+    image: "/placeholder.svg?height=200&width=400",
     mode: "CONQUEST LARGE"
   }
 ]
@@ -89,13 +89,13 @@ export default function ServerInfo() {
     <div 
       className="min-h-screen text-white p-6 relative overflow-auto"
       style={{
-        backgroundImage: "url('/bg.jpg')",
+        backgroundImage: "url('/601abb0b487fc1bfc56a1c3b_menu__background-30blur.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed'
       }}
-    >        
+    >      
       {/* Content Container */}
       <div className="relative z-10">
         {/* Header Navigation */}
@@ -120,68 +120,61 @@ export default function ServerInfo() {
           <CardHeader className="border-b border-zinc-800">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                
-                <h2 className="text-white text-xl font-bold">! RC3-BASEMAPS</h2>
-              </div>
-              <div className="flex items-center text-white text-sm">
                 <Image
-                  src="/USflag.png?height=24&width=24"
+                  src="/placeholder.svg?height=24&width=24"
                   alt="US Flag"
                   width={24}
                   height={24}
                   className="rounded"
                 />
-                <span className="ml-2">CONQUEST LARGE - LANCANG DAM - CUSTOM - 60 HZ</span>
+                <h2 className="text-xl font-bold">! RC3-BASEMAPS</h2>
+              </div>
+              <div className="text-sm">
+                CONQUEST LARGE - LANCANG DAM - CUSTOM - 60 HZ
               </div>
               <div className="text-xs text-zinc-300">
-                  Server protected by The_X-50 AntiCheat. Vip !Rules, Questions, Request, Appeal. Visit us: www.epg.gg | Discord
-                  https://discord.gg/5r5NK4d
+                Server protected by The_X-50 AntiCheat. Vip !Rules, Questions, Request, Appeal. Visit us: www.epg.gg | Discord
+                https://discord.gg/5r5NK4d
               </div>
             </div>
           </CardHeader>
           <CardContent className="pt-6">
             {/* Action Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                <Button className="w-full bg-transparent text-white hover:bg-white hover:text-black transition-colors border-2 border-white-500 border-solid">
-                  JOIN
-                </Button>
-                <Button className="w-full bg-transparent text-white hover:bg-white hover:text-black transition-colors border-2 border-white-500 border-solid">
-                  SPECTATE
-                </Button>
-                <Button className="w-full bg-transparent text-white hover:bg-white hover:text-black transition-colors border-2 border-white-500 border-solid">
-                  JOIN AS COMMANDER
-                </Button>
-                <Button className="w-full bg-transparent text-white hover:bg-white hover:text-black transition-colors border-2 border-white-500 border-solid">
-                  <Star className="h-5 w-5 mr-2" />
-                  13672
-                </Button>
-              </div>
+            <div className="grid grid-cols-4 gap-4 mb-6">
+              <Button className="bg-zinc-800 text-white hover:bg-white hover:text-black transition-colors">JOIN</Button>
+              <Button className="bg-zinc-800 text-white hover:bg-white hover:text-black transition-colors">SPECTATE</Button>
+              <Button className="bg-zinc-800 text-white hover:bg-white hover:text-black transition-colors">JOIN AS COMMANDER</Button>
+              <Button className="bg-zinc-800 text-white hover:bg-white hover:text-black transition-colors">
+                <Star className="h-5 w-5 mr-2" />
+                13672
+              </Button>
+            </div>
 
             {/* Server Stats */}
             <div className="grid grid-cols-3 gap-8 mb-6 text-sm">
               <div>
-                <div className='text-white'>PLAYERS</div>
-                <div className="text-white text-xl">{serverData.stats.players}</div>
+                <div>PLAYERS</div>
+                <div className="text-xl">{serverData.stats.players}</div>
               </div>
               <div>
-                <div className='text-white'>PING</div>
-                <div className="text-xl text-white">{serverData.stats.ping}</div>
+                <div>PING</div>
+                <div className="text-xl">{serverData.stats.ping}</div>
               </div>
               <div>
-                <div className='text-white'>TICKRATE</div>
-                <div className="text-xl text-white">{serverData.stats.tickrate}</div>
+                <div>TICKRATE</div>
+                <div className="text-xl">{serverData.stats.tickrate}</div>
               </div>
             </div>
 
             {/* Settings Grid */}
             <div className="grid grid-cols-3 gap-8 text-sm mb-8">
               <div className="space-y-4">
-                <h3 className="font-semibold mb-2 text-white">SETTINGS</h3>
+                <h3 className="font-semibold mb-2">SETTINGS</h3>
                 <div className="space-y-2">
                   {serverData.settings.map(([label, value]) => (
                     <div 
                       key={label} 
-                      className="grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded text-white"
+                      className="grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
                     >
                       <div>{label}</div>
                       <div>{value}</div>
@@ -191,12 +184,12 @@ export default function ServerInfo() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="font-semibold mb-2 text-white">ADVANCED</h3>
+                <h3 className="font-semibold mb-2">ADVANCED</h3>
                 <div className="space-y-2">
                   {serverData.advanced.map(([label, value]) => (
                     <div 
                       key={label} 
-                      className="text-white grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
+                      className="grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
                     >
                       <div>{label}</div>
                       <div>{value}</div>
@@ -206,12 +199,12 @@ export default function ServerInfo() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="font-semibold mb- text-white">RULES</h3>
+                <h3 className="font-semibold mb-2">RULES</h3>
                 <div className="space-y-2">
                   {serverData.rules.map(([label, value]) => (
                     <div 
                       key={label} 
-                      className="text-white grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
+                      className="grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
                     >
                       <div>{label}</div>
                       <div>{value}</div>
@@ -237,12 +230,12 @@ export default function ServerInfo() {
                         fill
                         className="object-cover"
                       />
-                    <div className="absolute inset-0 bg-black/60 transition-colors">
-                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transition-colors group-hover:bg-white/90 group-hover:text-black">
-                        <div className="text-sm">{map.mode}</div>
-                        <div className="font-bold">{map.name}</div>
+                      <div className="absolute inset-0 bg-black/60 group-hover:bg-white/90 transition-colors">
+                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white group-hover:text-black">
+                          <div className="text-sm">{map.mode}</div>
+                          <div className="font-bold">{map.name}</div>
+                        </div>
                       </div>
-                    </div>
                     </div>
                   </div>
                 ))}
