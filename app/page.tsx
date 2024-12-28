@@ -174,53 +174,53 @@ export default function ServerInfo() {
             </div>
 
             {/* Settings Grid */}
-            <div className="grid grid-cols-3 gap-8 text-sm mb-8">
-              <div className="space-y-4">
-                <h3 className="font-semibold mb-2 text-white">SETTINGS</h3>
-                <div className="space-y-2">
-                  {serverData.settings.map(([label, value]) => (
-                    <div 
-                      key={label} 
-                      className="grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded text-white"
-                    >
-                      <div>{label}</div>
-                      <div>{value}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="font-semibold mb-2 text-white">ADVANCED</h3>
-                <div className="space-y-2">
-                  {serverData.advanced.map(([label, value]) => (
-                    <div 
-                      key={label} 
-                      className="text-white grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
-                    >
-                      <div>{label}</div>
-                      <div>{value}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="font-semibold mb- text-white">RULES</h3>
-                <div className="space-y-2">
-                  {serverData.rules.map(([label, value]) => (
-                    <div 
-                      key={label} 
-                      className="text-white grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
-                    >
-                      <div>{label}</div>
-                      <div>{value}</div>
-                    </div>
-                  ))}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm mb-8">
+            <div className="space-y-4">
+              <h3 className="font-semibold mb-2 text-white">SETTINGS</h3>
+              <div className="space-y-2">
+                {serverData.settings.map(([label, value]) => (
+                  <div 
+                    key={label} 
+                    className="grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded text-white"
+                  >
+                    <div>{label}</div>
+                    <div>{value}</div>
+                  </div>
+                ))}
               </div>
             </div>
 
+            <div className="space-y-4">
+              <h3 className="font-semibold mb-2 text-white">ADVANCED</h3>
+              <div className="space-y-2">
+                {serverData.advanced.map(([label, value]) => (
+                  <div 
+                    key={label} 
+                    className="text-white grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
+                  >
+                    <div>{label}</div>
+                    <div>{value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="font-semibold mb-2 text-white">RULES</h3>
+              <div className="space-y-2">
+                {serverData.rules.map(([label, value]) => (
+                  <div 
+                    key={label} 
+                    className="text-white grid grid-cols-2 gap-2 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer rounded"
+                  >
+                    <div>{label}</div>
+                    <div>{value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+      </div>
             {/* Map Rotation */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-white">MAP ROTATION</h3>
